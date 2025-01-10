@@ -13,8 +13,9 @@ h5 {
 }
 
 .content {
-    max-width: 600px; /* Limits the content width to 600px */
-    padding: 20px; /* Adds spacing inside the content box */
+    max-width: 475px; /* Limits the content width to 600px */
+    padding: 60px; /* Adds spacing inside the content box */
+    border: 2px solid gray;
 }
 
 p {
