@@ -1,0 +1,37 @@
+header{
+    text-align: center;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    /* line-height: 1.5; */
+}
+h1{
+    line-height: 1.5;
+}
+
+h5 {
+    color: #006EB6;
+}
+
+.content {
+    max-width: 600px; /* Limits the content width to 600px */
+    padding: 20px; /* Adds spacing inside the content box */
+}
+
+p {
+    text-align: left; /* Ensures paragraphs are left-aligned */
+}
+
+body{
+    display: flex;
+     justify-content: center; 
+    background-color: #f9f9f9; /* Adds a light background color for design purposes */
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+width: 150px;
+}
