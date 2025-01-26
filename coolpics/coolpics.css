@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  /* --accent-color: #f45b69; */
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, san-serif;
+}
+* {
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  background-color: #52489c;
+  color: #ebebeb;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  /* background-color: #f45b69; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the navigation bar horizontally */
+  align-items: center; /* Center the navigation items vertically (if needed) */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Use flexbox to space out items */
+  /* margin: 0; */
+  gap: 75px; /* Add 25px space between each item */
+}
+
+.gallery {
+  display: grid; /* Use grid to create columns */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  gap: 20px; /* Space between the images */
+}
+
+/* Style for the figure and image */
+.gallery figure {
+  margin: 0; /* Remove default margin */
+}
+
+footer {
+  background-color: #52489c;
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 15px black;
+}
+
+@media screen and (min-width: 100px) {
+  nav ul {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Space between each button */
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav ul {
+    display: none; /* Hide the entire navigation */
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  nav ul {
+    flex-direction: row; /* Stack buttons in a row */
+    justify-content: center; /* Center the navigation bar */
+    gap: 25px; /* Maintain 25px gap between the items */
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
