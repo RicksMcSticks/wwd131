@@ -94,11 +94,12 @@ img {
 }
 
 @media screen and (min-width: 1000px) {
-  nav ul {
-    flex-direction: row; /* Stack buttons in a row */
-    justify-content: center; /* Center the navigation bar */
-    gap: 25px; /* Maintain 25px gap between the items */
-  }
+    nav ul {
+        display: flex; /* Use flexbox to display the buttons in a row */
+        flex-direction: row; /* Ensure buttons are in a row */
+        justify-content: center; /* Center the navigation bar */
+        gap: 25px; /* Space between the buttons */
+      }
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
