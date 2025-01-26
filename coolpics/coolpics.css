@@ -98,7 +98,7 @@ img {
         display: flex; /* Use flexbox to display the buttons in a row */
         flex-direction: row; /* Ensure buttons are in a row */
         justify-content: center; /* Center the navigation bar */
-        gap: 25px; /* Space between the buttons */
+        gap: 100px; /* Space between the buttons */
       }
 
   .gallery {
