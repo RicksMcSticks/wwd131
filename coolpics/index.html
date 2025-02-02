@@ -9,8 +9,8 @@
   </head>
   <header>
     <h1>Cool Pics 📷</h1>
-    <h2>menu</h2>
-    <nav>
+    <button class="btn" id="menuButton">Menu</button>
+    <nav id="navMenu">
       <ul>
         <a href="#" class="button">Home</a>
         <a href="#" class="button">People</a>
@@ -22,6 +22,11 @@
   </header>
   <body>
     <h3>Current Work</h3>
+    <!-- Modal Viewer (Initially Hidden) -->
+    <div class="viewer">
+      <button class="close-viewer">X</button>
+      <img src="" alt="Expanded Image"> <!-- Empty src initially -->
+    </div>
     <section class="gallery">
       <figure>
         <img src="norris-sm.jpeg" alt="picture" />

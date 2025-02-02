@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
 :root {
   --primary-color: #52489c;
   --secondary-color: #59c3c3;
@@ -6,62 +7,176 @@
   --text-dark: #333;
   --text-light: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: Mooli, san-serif;
+  --secondary-font: Mooli, sans-serif; /* Fixed 'san-serif' typo */
 }
+
 * {
   align-items: center;
   text-align: center;
 }
 
-header {
-  background-color: #52489c;
-  color: #ebebeb;
-}
-
 body {
   font-family: var(--primary-font);
   font-size: 1.2em;
-  /* background-color: #f45b69; */
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
 }
 
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 10px;
+}
+
+/* Button */
+.btn {
+  all: unset;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  border: 2px solid var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* Navigation */
 nav {
   display: flex;
-  justify-content: center; /* Center the navigation bar horizontally */
-  align-items: center; /* Center the navigation items vertically (if needed) */
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-  display: flex; /* Use flexbox to space out items */
-  /* margin: 0; */
-  gap: 75px; /* Add 25px space between each item */
+  display: flex;
+  gap: 75px;
 }
 
-.gallery {
-  display: grid; /* Use grid to create columns */
-  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-  gap: 20px; /* Space between the images */
+nav ul a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+  transition: color 0.3s ease;
 }
 
-/* Style for the figure and image */
-.gallery figure {
-  margin: 0; /* Remove default margin */
+nav ul a:hover {
+  color: var(--secondary-color);
 }
 
-footer {
-  background-color: #52489c;
+/* Hide menu by default on small screens */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Class that JavaScript will toggle */
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* Modal viewer, initially hidden */
+.viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+}
+
+.viewer.show {
+  display: flex; 
+}
+
+/* Modal image styling */
+.viewer img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 5px 5px 15px black;
+  border-radius: 10px;
+}
+
+/* Close button styling */
+.close-viewer {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+/* Close button hover effect */
+.close-viewer:hover {
+  background: red;
   color: white;
 }
 
-a:link,
-a:visited {
-  color: var(--accent-color);
+
+/* Large screen modal adjustments */
+@media screen and (min-width: 1000px) {
+  .viewer img {
+    max-width: 60%;
+    max-height: 80%;
+  }
 }
 
+
+/* Ensure menu is always visible on large screens */
+/* Hide menu by default on small screens */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Class that JavaScript will toggle */
+  nav ul.show {
+    display: flex;
+  }
+}
+
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+/* Gallery images */
 img {
   max-width: 100%;
   height: 250px;
@@ -72,37 +187,36 @@ img {
   box-shadow: 5px 5px 15px black;
 }
 
-@media screen and (min-width: 100px) {
-  nav ul {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: flex-start; /* Align items to the left */
-    gap: 10px; /* Space between each button */
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 700px) {
+  .viewer img {
+    max-width: 95%;
+    max-height: 95%;
   }
 }
 
-@media screen and (min-width: 700px) {
+/* Adjust gallery for smaller screens */
+@media screen and (max-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
-  nav ul {
-    display: none; /* Hide the entire navigation */
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
 
-@media screen and (min-width: 1000px) {
-    nav ul {
-        display: flex; /* Use flexbox to display the buttons in a row */
-        flex-direction: row; /* Ensure buttons are in a row */
-        justify-content: center; /* Center the navigation bar */
-        gap: 100px; /* Space between the buttons */
-      }
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+}
 
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+/* Link styling */
+a:link,
+a:visited {
+  color: var(--accent-color);
 }
