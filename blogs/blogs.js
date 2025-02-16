@@ -9,7 +9,7 @@ const articles = [
 		imgAlt: 'Book cover for Septimus Heap 1',
 		ages: '10-14',
 		genre: 'Fantasy',
-		stars: '****'
+		stars: '⭐⭐⭐⭐'
 	},
 	{
 		id: 2,
@@ -23,5 +23,41 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: 'Fablehaven',
+		date: 'December 12, 2008',
+		description:
+			'The anticipated new novel by Rick Riordan. After Greek mythology (Percy Jackson), Greek/Roman (Heroes of Olympus), and Egyptian (Kane Chronicles), Rick decides to try his hand with Norse Mythology, and the end result is good.',
+		imgSrc:
+			'https://books.google.com/books/content/images/frontcover/xWuyBAAAQBAJ?fife=w300',
+		imgAlt: 'Book cover for Fablehaven',
+		ages: '12-16',
+		genre: 'Fantasy',
+		stars: '⭐⭐⭐⭐⭐'
 	}
 ]
+
+console.log(articles[1].title);
+
+const container = document.querySelector('#blog-articles');
+articles.forEach(function(item){
+	let book = document.createElement('article');
+
+	book.setAttribute('class', 'book');
+
+let html = `
+	<div class="cards1">
+	<em><p>${ClipboardItem.date}</p></em>
+	<p>${item.ages}</p>
+	<p>${item.genre}</p>
+	<p>${item.stars}</p>
+	<h2>${item.title}</h2>			
+	<img src="${item.imgSrc}" alt="${item.imgAlt}">
+	<p>${item.description}</p>
+	</div>
+`
+	book.innerHTML = html;
+	container.appendChild(book);
+})

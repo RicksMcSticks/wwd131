@@ -6,6 +6,7 @@
     <title>Book Reviews</title>
     <meta name="description" content="A website for book reviews based on age appropriateness, genre, and more.">
     <link rel="stylesheet" href="blogs.css">
+    <script defer src="blogs.js"></script>
 
 </head>
 <body>
@@ -18,41 +19,13 @@
                 <a href="archive.html">Archive</a>
             </ul>
         </nav>
-        <div class="skiptocontent">
+        <div class="skiptocontent" id="maincontent">
             <a href="#maincontent">skip to main content </a>
         </div>
     </header>
 
-    <main id="maincontent">
-      
-    
-        <!-- Center Column: Books and Info Together -->
-        <section class="cards">
-            <div class="card">
-                <h2>Fablehaven</h2>
-                <img class="book-cover" src="Images/Fable.jpg" alt="Fablehaven book 1 book cover">
-                <p class="book-info">A thrilling fantasy series about magical creatures and hidden sanctuaries.</p>
-            </div>
-            <div class="card">
-                <h2>Percy Jackson</h2>
-                <img class="book-cover" src="Images/percy.jpg" alt="Percy Jackson book 1">
-                <p class="book-info">An adventurous tale about Greek mythology in the modern world.</p>
-            </div>
-        </section>
-    
-        <!-- Right Column: Filters -->
-        <!-- <aside class="filters">
-            <h2>Filters</h2>
-            <label>
-                <input type="checkbox"> Fiction
-            </label>
-            <label>
-                <input type="checkbox"> Non-fiction
-            </label>
-            <label>
-                <input type="checkbox"> Sci-Fi
-            </label>
-        </aside> -->
+    <main>
+        <div id="blog-articles"></div>
     </main>
     
 

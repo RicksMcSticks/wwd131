@@ -22,20 +22,27 @@ header {
     margin: 0 auto;
     text-align: center;
     max-width: 100%;
+    position-anchor: sticky;
 }
 
 h1 {
     padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    justify-content: end;
     align-items: center;
     background-color: var(--primary-color-dark);
     text-decoration: none;
-    text-align: center;
+    font-size: medium;
 }
 
 nav a {
@@ -44,76 +51,45 @@ nav a {
     color: var(--font-color-dark);
 }
 
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;  */
-    /* Left = Info, Center = Books, Right = Filters */
-    /* gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    align-items: start;
-} */
-
-/* Right Column: Filters
-.filters {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 15px;
-    position: sticky;
-    top: 20px;
-} */
-
-/* Books Section */
-.cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+nav a:hover{
+    color: black;
+    background-color: lightblue;
+    border-radius: 5px;
+    font-size: medium;
 }
 
-/* Individual Book Cards */
-.card {
+main{
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.card1 {
     border-radius: 30px;
     background-color: var(--secondary-color);
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
     margin: 0 auto;
+    max-width: 100%;
+    min-width: 400px;
 }
 
-/* Book Images */
-.book-cover {
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
+img{
+    width: 50%;
 }
 
-/* Book Info Stays with Each Book */
-.book-info {
-    font-size: 16px;
-    color: var(--font-color-dark);
-}
-
-/* Left Column: Information */
-.info {
+.card2{
+    border-radius: 30px;
     background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 350px;
+    height: 600px;
 }
 
-.skiptocontent a{
-    position: absolute;
-    left: -999px; /* Hides it offscreen */
-    top: 10px;
-    background: #ff944c;
-    color: white;
+.cards h2{
     padding: 10px;
-    text-decoration: none;
-    font-size: 16px;
 }
 
-.skiptocontent a:focus {
-    left: 10px; /* Brings it into view when focused */
+.skiptocontent a:focus{
+    top: 0;
 }
+
