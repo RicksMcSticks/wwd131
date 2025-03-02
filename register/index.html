@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <h1>Participant Registration</h1>
+
+    <form id="registration-form">
+        <fieldset id="participants">
+            <legend>Participants</legend>
+
+            <section class="participant1">
+                <label for="name1">Participant 1 Name:</label>
+                <input type="text" id="name1" name="name1" required><br><br>
+
+                <label for="fee1">Fee:</label>
+                <input type="number" id="fee1" name="fee1" required><br><br>
+            </section>
+
+            <button type="button" id="add-participant">Add Participant</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Adult Information</legend>
+            <label for="adult-name">Adult Name:</label>
+            <input type="text" id="adult-name" name="adult-name" required><br><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <section id="summary" class="hide">
+        <h2>Registration Summary</h2>
+        <p id="summary-message"></p>
+    </section>
+
+    <script src="register.js"></script>
+</body>
+</html>

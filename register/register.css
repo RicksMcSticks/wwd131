@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#participants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+#summary {
+    margin-top: 20px;
+    text-align: center;
+}
