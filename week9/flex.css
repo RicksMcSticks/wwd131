@@ -1,0 +1,36 @@
+.main_nav {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.5em;
+    justify-content: flex-end;
+}
+
+.main_nav li {
+    flex: 0 1 5em;
+
+}
+
+.main_nav li a {
+    color: black;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+main img{
+    width: 300px;
+}
+
+main section{
+    margin: 0 auto;
+}
+
+/* @media screen and (max-width: 700px){
+    .main_nav{
+        flex-direction: ;
+    }
+} */
