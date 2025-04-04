@@ -191,53 +191,49 @@ nav a:hover {
     text-align: center;
     font-size: 1.2em;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center;     /* Center the content vertically */
-    gap: 15px;               /* Space between the social icons */
-    padding: 10px 0;         /* Optional: Add some padding for better spacing */
+    justify-content: center;
+    align-items: center;     
+    gap: 15px;               
+    padding: 10px 0;        
   }
   
-  /* Style the social icons */
+  /* social media part */
   .social-icon {
     display: inline-block;
     transition: opacity 0.3s ease-in-out;
   }
   
-  /* Style the images within the links */
   .social-icon-img {
-    width: 30px;  /* Adjust size */
+    width: 30px; 
     height: auto;
   }
   
-  /* Hover effect */
+
   .social-icon:hover .social-icon-img {
-    opacity: 0.7; /* Slight transparency effect on hover */
+    opacity: 0.7;
   }
-  /* dark mode and light mode */
-  /* Default light mode */
-/* Light mode text color */
+/* this is the social media part */
+
+  /* dark and light mode */
 body {
     background-color: #f3f2f2;
     color: #000000;
   }
   
-  /* Dark mode text color */
   body.dark-mode {
     background-color: #121212;
     color: #ffffff;
   }
   
-  /* Ensure all paragraphs switch colors properly */
   body:not(.dark-mode) p {
-    color: #000000; /* Black text in light mode */
+    color: #000000; 
   }
   
   body.dark-mode p {
-    color: #ffffff; /* White text in dark mode */
+    color: #ffffff; 
   }
   
   
-  /* Toggle switch styles */
   .switch {
     position: absolute;
     top: 10px;
@@ -253,7 +249,6 @@ body {
     height: 0;
   }
   
-  /* Slider styles */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -278,7 +273,6 @@ body {
     border-radius: 50%;
   }
   
-  /* When checked, move the slider */
   input:checked + .slider {
     background-color: #710627;
   }
@@ -294,6 +288,8 @@ body {
  width: 80px;
  margin: 0 0 0 auto;
 }
+
+/* not gonna lie this part was so hard but i somehow got it to all work!! */
 
 .homie {
     display: grid;
@@ -319,7 +315,7 @@ body {
     margin: 0 auto;
 }
 
-/* Style text containers */
+
 .surfing, .triathlon, .color-run {
     text-align: center;
     max-width: 80%;
@@ -332,7 +328,7 @@ body {
     padding: 15px;
 }
 
-/* Ensure text wraps and is readable */
+
 p {
     font-size: 1.2rem;
     color: white;
@@ -342,7 +338,6 @@ p {
     word-wrap: break-word;
 }
 
-/* Image positioning for large screens */
 .surfing-pic {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -361,27 +356,22 @@ p {
 
 
 
-/* .hidden-text {
-    display: none;
-  } */
-  
-/* Style for the modal */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
   }
   
   .modal-content {
-    max-width: 90%; /* Limit the max size of the image */
-    max-height: 90%; /* Limit the max size of the image */
+    max-width: 90%; 
+    max-height: 90%;
   }
   
   .close-btn {
@@ -399,7 +389,7 @@ p {
   }
   
   .clickable-image:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1); 
   }
   
   @media (min-width: 1200px) {
@@ -412,7 +402,7 @@ p {
     }
   
     .homie-section {
-      display: contents; /* Allows inner grid positioning to work */
+      display: contents;
     }
   
     .surfing-pic {
@@ -446,11 +436,9 @@ p {
     }
   }
   
-    /* Ensures images appear ABOVE text for all sections */
- 
 
 
-/* 📏 Adjusts layout for mid-sized screens (900px and below) */
+
 @media (max-width: 900px) {
     .homie {
         display: flex;
@@ -469,7 +457,7 @@ p {
     }
 }
 
-/* 📏 Optimizes for small mobile screens (600px and below) */
+
 @media (min-width: 600px) {
     p {
         font-size: 1rem;

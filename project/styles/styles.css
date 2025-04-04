@@ -191,31 +191,31 @@ nav a:hover {
     text-align: center;
     font-size: 1.2em;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center;     /* Center the content vertically */
-    gap: 15px;               /* Space between the social icons */
-    padding: 10px 0;         /* Optional: Add some padding for better spacing */
+    justify-content: center; 
+    align-items: center;    
+    gap: 15px;               
+    padding: 10px 0;         
   }
   
-  /* Style the social icons */
+ /* this is the social media section */
   .social-icon {
     display: inline-block;
     transition: opacity 0.3s ease-in-out;
   }
   
-  /* Style the images within the links */
+
   .social-icon-img {
-    width: 30px;  /* Adjust size */
+    width: 30px; 
     height: auto;
   }
   
-  /* Hover effect */
+ 
   .social-icon:hover .social-icon-img {
-    opacity: 0.7; /* Slight transparency effect on hover */
+    opacity: 0.7; 
   }
-  /* dark mode and light mode */
-  /* Default light mode */
-/* Light mode text color */
+/* social media section */
+
+ /* Dark mode and light mode section */
 body {
     background-color: #ffffff;
     color: #000000;
@@ -278,7 +278,7 @@ body {
     border-radius: 50%;
   }
   
-  /* When checked, move the slider */
+  
   input:checked + .slider {
     background-color: #710627;
   }
@@ -286,7 +286,7 @@ body {
   input:checked + .slider:before {
     transform: translateX(24px);
   }
-  /*Dark mode and light mode  */
+ /* dark mode and light mode settings */
   
   
 
@@ -296,10 +296,10 @@ body {
 }
 
 .hero {
-    width: 75vw; /* 75% of the viewport width */
-    margin: 20px auto; /* Adds margin on all sides and centers it */
+    width: 75vw;
+    margin: 20px auto;
     display: block;
-    border-radius: 10px; /* Optional: adds rounded corners */
+    border-radius: 10px;
   }
   
 
@@ -309,10 +309,11 @@ body {
 }
 
 .homie img {
-    max-width: 80%; /* Adjust this value as needed */
+    /* this is really nice so it just stays at 80% of what it is the whole time */
+    max-width: 80%; 
     height: auto;
     display: block;
-    margin: 0 auto; /* Centers the images */
+    margin: 0 auto; 
   }
   
 
@@ -340,23 +341,23 @@ p{
     display: none;
   }
   
-/* Style for the modal */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8); 
     justify-content: center;
     align-items: center;
   }
   
   .modal-content {
-    max-width: 90%; /* Limit the max size of the image */
-    max-height: 90%; /* Limit the max size of the image */
+    max-width: 90%; 
+    max-height: 90%; 
   }
   
   .close-btn {
@@ -374,12 +375,12 @@ p{
   }
   
   .clickable-image:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1); 
   }
   
 
 
-/* Default: Stack sections vertically */
+
 .homie {
     display: flex;
     flex-direction: column;
@@ -387,36 +388,36 @@ p{
     gap: 20px;
   }
   
-  /* For screens wider than 1200px: Display all three sections in one row */
+ 
   @media (min-width: 1200px) {
     .homie {
       flex-direction: row;
       justify-content: space-around;
     }
     .homie > div {
-      width: 30%; /* Each section takes about 30% of the width */
+      width: 30%; 
     }
   }
   
-  /* For screens between 900px and 1200px: Show two sections per row */
+
   @media (max-width: 1199px) and (min-width: 900px) {
     .homie {
       flex-wrap: wrap;
       justify-content: center;
     }
     .homie > div {
-      width: 45%; /* Two per row */
+      width: 45%; 
     }
   }
   
-  /* For screens smaller than 900px: Stack vertically */
+ 
   @media (max-width: 899px) {
     .homie {
       flex-direction: column;
       align-items: center;
     }
     .homie > div {
-      width: 90%; /* Take most of the screen width */
+      width: 90%; 
     }
   }
   
