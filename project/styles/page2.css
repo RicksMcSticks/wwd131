@@ -1,0 +1,485 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #08A4BD  ;
+  --secondary-color: #333333 ;
+  --accent1-color: #FF6B6B;
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: 'IM Fell French Canon SC', serif;
+  --paragraph-font: 'Lato', sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #08A4BD;  /* headlines on a white background */ 
+  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #060606; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #08A4BD  ;
+  --nav-link-color: #fafafa;
+  --nav-background-color: #08A4BD;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #333333;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+body {
+  max-width: 1200px;
+  /* max-width: 100%; */
+  margin: 0 auto;
+  /* padding: 4em; */
+  font-size: 18px;
+  text-align: center;
+  background-color: #575555;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  /* padding: 1em; */
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+  border: 1px rgb(12, 12, 12) solid;
+  border-right: 1px rgb(12, 12, 12) solid;
+}
+nav  {
+  list-style-type: none;
+  display: flex;
+
+}
+nav a {
+  padding:1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+
+  text-align: center;
+
+}
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.foot {
+    color: white;
+    background-color: #060606;
+  }
+  
+  footer {
+    background-color: #710627;
+    color: white;
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;     /* Center the content vertically */
+    gap: 15px;               /* Space between the social icons */
+    padding: 10px 0;         /* Optional: Add some padding for better spacing */
+  }
+  
+  /* Style the social icons */
+  .social-icon {
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Style the images within the links */
+  .social-icon-img {
+    width: 30px;  /* Adjust size */
+    height: auto;
+  }
+  
+  /* Hover effect */
+  .social-icon:hover .social-icon-img {
+    opacity: 0.7; /* Slight transparency effect on hover */
+  }
+  /* dark mode and light mode */
+  /* Default light mode */
+/* Light mode text color */
+body {
+    background-color: #f3f2f2;
+    color: #000000;
+  }
+  
+  /* Dark mode text color */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Ensure all paragraphs switch colors properly */
+  body:not(.dark-mode) p {
+    color: #000000; /* Black text in light mode */
+  }
+  
+  body.dark-mode p {
+    color: #ffffff; /* White text in dark mode */
+  }
+  
+  
+  /* Toggle switch styles */
+  .switch {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider styles */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* When checked, move the slider */
+  input:checked + .slider {
+    background-color: #710627;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  /*Dark mode and light mode  */
+  
+  
+
+.logo{
+ width: 80px;
+ margin: 0 0 0 auto;
+}
+
+.homie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+}
+
+.homie img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style text containers */
+.surfing, .triathlon, .color-run {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    padding: 15px;
+}
+
+/* Ensure text wraps and is readable */
+p {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    max-width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Image positioning for large screens */
+.surfing-pic {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.tri-pic {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.color-pic {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+
+
+
+/* .hidden-text {
+    display: none;
+  } */
+  
+/* Style for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    max-width: 90%; /* Limit the max size of the image */
+    max-height: 90%; /* Limit the max size of the image */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .clickable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .clickable-image:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  @media (min-width: 1200px) {
+    .homie {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  
+    .homie-section {
+      display: contents; /* Allows inner grid positioning to work */
+    }
+  
+    .surfing-pic {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  
+    .surfing {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  
+    .tri-pic {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  
+    .triathlon {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  
+    .color-pic {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+  
+    .color-run {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  }
+  
+    /* Ensures images appear ABOVE text for all sections */
+ 
+
+
+/* 📏 Adjusts layout for mid-sized screens (900px and below) */
+@media (max-width: 900px) {
+    .homie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .activity {
+        max-width: 90%;
+    }
+
+    .homie img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* 📏 Optimizes for small mobile screens (600px and below) */
+@media (min-width: 600px) {
+    p {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .homie img {
+        max-width: 85%;
+    }
+}
